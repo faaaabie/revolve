@@ -202,15 +202,25 @@ class Plasticoding(Genotype):
                 true_clauses = []
                 clause_is_true = None
                 for flavor in range(0, len(self.grammar[letter])):
-                    clause = ''
-                    for item in self.grammar[letter][flavor][0]:
-                        for subitem in item:
-                            clause += str(subitem) + ' '
+                    #clause = ''
+                    #for item in self.grammar[letter][flavor][0]:
+                    #    for subitem in item:
+                    #        clause += str(subitem) + ' '
 
-                    clause_is_true = eval(clause)
+                    #clause_is_true = eval(clause)
 
-                    if clause_is_true:
-                        true_clauses.append(flavor)
+                    #if clause_is_true:
+                    #    true_clauses.append(flavor)
+
+                    #Remove the regulation part, the clauses are activated in an alternating way.
+                    if environment == 'plane':
+                        if flavor % 2:
+                            true_clauses.append(flavor)
+                    elif environment == 'tilted5':
+                        if flavor % 2:
+                            continue
+                        else:
+                            true_clauses.append(flavor)
 
                 # if no clause is true, letter doesnt get expressed
                 if len(true_clauses) == 0:
