@@ -217,10 +217,9 @@ class Plasticoding(Genotype):
                         if flavor % 2:
                             true_clauses.append(flavor)
                     elif environment == 'tilted5':
-                        if flavor % 2:
-                            continue
-                        else:
+                        if not flavor % 2:
                             true_clauses.append(flavor)
+                            
 
                 # if no clause is true, letter doesnt get expressed
                 if len(true_clauses) == 0:
