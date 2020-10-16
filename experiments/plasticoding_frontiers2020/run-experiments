@@ -13,8 +13,8 @@
 
 while true
 	do
-         for i in {1..20}; do
-                ./revolve.py --experiment-name experiments/EC_C/data/plastic_big_$i --run $i --manager experiments/plasticoding_frontiers2020/plastic_big.py --n-cores 4 --port-start 11141  --evaluation-time 50;
+         for i in {1..2}; do
+                ./revolve.py --experiment-name experiments/EC_C/data/plastic_big_$i --run $i --manager experiments/plasticoding_frontiers2020/plastic_big.py --port-start 11141  --evaluation-time 50;
 
                 sleep 5s
 	   done
