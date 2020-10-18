@@ -14,7 +14,7 @@
 while true
 	do
          for i in {1..2}; do
-                ./revolve.py --experiment-name experiments/EC_C/data/plastic_big_$i --run $i --manager experiments/plasticoding_frontiers2020/plastic_big.py --port-start 11141  --evaluation-time 50;
+                ./revolve.py --experiment-name EC_C/data/plastic_big_$i --run $i --manager experiments/plasticoding_frontiers2020/plastic_big.py --port-start 11141  --evaluation-time 50;
 
                 sleep 5s
 	   done
