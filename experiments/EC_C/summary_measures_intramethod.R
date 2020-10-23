@@ -15,12 +15,12 @@ analysis = 'results'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
 experiments_type = c('plastic_big')
-experiments_labels = c('Plastic big')
+experiments_labels = c('Plastic big plane', 'Plastic big tilted')
 runs = list(c(1:2))
 
 environments = list(c('plane', 'tilted5') ) # update with desired environment
 environments_labels = c('Plane', 'Tilted5') 
-initials =   c('pbp', 'pbt')
+initials =   c('Plane', 'Tilted')
 experiments_labels2 = c('Plastic big - Plane', 'Plastic big - Tilted')
 
 gens = 5
