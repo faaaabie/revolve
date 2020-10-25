@@ -251,7 +251,8 @@ def standard_mutation(genotype, mutation_conf):
                 modified_genotype = handle_swap_plastic(new_genotype)
             elif mutation_type == 3:
                 modified_genotype = handle_addition_plastic(new_genotype, mutation_conf.genotype_conf)
-            #elif mutation_type == 4:
+            elif mutation_type == 4:
+                pass
                 #modified_genotype = handle_clause(new_genotype, mutation_conf)
             else:
                 raise Exception(
