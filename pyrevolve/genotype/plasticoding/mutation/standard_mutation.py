@@ -243,7 +243,7 @@ def standard_mutation(genotype, mutation_conf):
 
         if mutation_conf.genotype_conf.plastic:
 
-            mutation_type = random.randint(1, 4)
+            mutation_type = random.randint(1, 3)
 
             if mutation_type == 1:
                 modified_genotype = handle_deletion_plastic(new_genotype)
