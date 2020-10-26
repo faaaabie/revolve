@@ -255,7 +255,7 @@ def standard_mutation(genotype, mutation_conf):
                 #modified_genotype = handle_clause(new_genotype, mutation_conf)
             else:
                 raise Exception(
-                    'mutation_type value was not in the expected range (1,4). The value was: {}'.format(mutation_type))
+                    'mutation_type value was not in the expected range (1,3). The value was: {}'.format(mutation_type))
         else:
 
             mutation_type = random.randint(1, 3)
