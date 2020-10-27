@@ -6,7 +6,7 @@ dirpath = 'data/'
 experiments_type = [
 #  'flat_big',
 #'tilted_big',
- 'test_withoutmutaiton'
+ 'test_withoutmutation'
 #,'baseline_big'
 ]
 environments = {
