@@ -11,7 +11,7 @@ library(stringr)
 
 #### CHANGE THE PARAMETERS HERE ####
 base_directory <-paste('data', sep='')
-analysis = 'results'
+analysis = 'results_test_withoutmutation'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
 experiments_type = c('test_withoutmutation')
