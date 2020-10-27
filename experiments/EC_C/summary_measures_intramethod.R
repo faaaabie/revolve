@@ -14,17 +14,17 @@ base_directory <-paste('data', sep='')
 analysis = 'results'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('plastic_big')
-experiments_labels = c('Plastic big plane', 'Plastic big tilted')
+experiments_type = c('test_withoutmutation')
+experiments_labels = c('Test without mutation plane', 'Test without mutation tilted')
 runs = list(c(1:2))
 
 environments = list(c('plane', 'tilted5') ) # update with desired environment
 environments_labels = c('Plane', 'Tilted5') 
 initials =   c('Plane', 'Tilted')
-experiments_labels2 = c('Plastic big - Plane', 'Plastic big - Tilted')
+experiments_labels2 = c('Test without mutation - Plane', 'Test without mutation - Tilted')
 
-gens = 5
-pop = 10
+gens = 15
+pop = 100
 
 sig = 0.05
 line_size = 30
