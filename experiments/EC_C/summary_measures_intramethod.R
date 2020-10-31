@@ -225,7 +225,7 @@ for (met in 1:length(methods))
   
   quantiles = data.frame(temp %>% 
                            group_by(generation) %>% 
-                           summarize_at(vars(measures_aux), p_funs) )
+                           summarize_at(vars(measures_aux), funs(!!!p_funs)) )
   
   measures_averages_gens_2[[met]] = sqldf('select * from temp2 inner join quantiles using (generation)')
   
