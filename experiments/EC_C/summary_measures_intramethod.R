@@ -14,7 +14,7 @@ base_directory <-paste('data', sep='')
 analysis = 'results_test_withoutmutation_big'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('test_withoutmutation2')
+experiments_type = c('test_withoutmutation')
 experiments_labels = c('Test without mutation big plane', 'Test without mutation big tilted')
 runs = list(c(1:2))
 
