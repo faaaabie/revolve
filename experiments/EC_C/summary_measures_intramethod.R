@@ -11,17 +11,17 @@ library(stringr)
 
 #### CHANGE THE PARAMETERS HERE ####
 base_directory <-paste('data', sep='')
-analysis = 'results_test_withoutmutation'
+analysis = 'results_test_withoutmutation_big'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('test_withoutmutation')
-experiments_labels = c('Test without mutation plane', 'Test without mutation tilted')
+experiments_type = c('test_withoutmutation2')
+experiments_labels = c('Test without mutation big plane', 'Test without mutation big tilted')
 runs = list(c(1:2))
 
 environments = list(c('plane', 'tilted5') ) # update with desired environment
 environments_labels = c('Plane', 'Tilted5') 
 initials =   c('Plane', 'Tilted')
-experiments_labels2 = c('Test without mutation - Plane', 'Test without mutation - Tilted')
+experiments_labels2 = c('Test without mutation big - Plane', 'Test without mutation big - Tilted')
 
 gens = 15
 pop = 100
