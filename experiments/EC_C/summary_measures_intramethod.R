@@ -11,19 +11,19 @@ library(stringr)
 
 #### CHANGE THE PARAMETERS HERE ####
 base_directory <-paste('data', sep='')
-analysis = 'results_test_withoutmutation_big'
+analysis = 'results_cost_of_regulation_small'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('test_withoutmutation')
-experiments_labels = c('Test without mutation big plane', 'Test without mutation big tilted')
-runs = list(c(1:2))
+experiments_type = c('cost_of_regulation_big')
+experiments_labels = c('Cost of regulation small plane', 'Cost of regulation small tilted')
+runs = list(c(1:5))
 
 environments = list(c('plane', 'tilted5') ) # update with desired environment
 environments_labels = c('Plane', 'Tilted5') 
 initials =   c('Plane', 'Tilted')
-experiments_labels2 = c('Test without mutation big - Plane', 'Test without mutation big - Tilted')
+experiments_labels2 = c('Cost of regulation small - Plane', 'Cost of regulation small - Tilted')
 
-gens = 15
+gens = 200
 pop = 100
 
 sig = 0.05
