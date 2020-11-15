@@ -6,16 +6,16 @@ dirpath = 'data/'
 experiments_type = [
 #  'flat_big',
 #'tilted_big',
- 'test_withoutmutation'
+ 'cost_of_regulation_big'
 #,'baseline_big'
 ]
 environments = {
 #  'flat_big': ['plane'],
 #'tilted_big': ['tilted5'],
-  'test_withoutmutation': ['plane','tilted5']
+  'cost_of_regulation_big': ['plane','tilted5']
 # ,'baseline_big': ['plane','tilted5']
                  }
-runs = range(1,3)
+runs = range(1,6)
 
 
 # set these variables according to your experiments #
