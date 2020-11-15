@@ -11,20 +11,20 @@ library(stringr)
 
 #### CHANGE THE PARAMETERS HERE ####
 base_directory <-paste('data', sep='')
-analysis = 'results'
+analysis = 'results_small_vs_baseline'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('method1', 'method2')
-experiments_labels = c('Method 1', 'Method 2')
-runs = list(c(1:20), c(1:20))
+experiments_type = c('cost_of_regulatione_big', 'plasticoding_baseline')
+experiments_labels = c('Cost of regulation small', 'Plasticoding baseline')
+runs = list(c(1:5), c(1:20))
 
-environments = list( c( 'plane'), c( 'plane') ) # update with desired environment
-environments_labels = list( c( 'Plane'), c( 'Plane') ) 
-initials =   c( 'm1p', 'm2p')
-experiments_labels2 = c('Method 1 - Plane', 'Method 2 - Plane')
+environments = list(c('plane', 'tilted5'), c('plane', 'tilted5')) # update with desired environment
+environments_labels = list(c('Plane', 'Tilted'), c('Plane', 'Tilted')) 
+initials = c( 'm1p', 'm1t', 'm2p', 'm2t')
+experiments_labels2 = c('Cost of regulation small - Plane', 'Cost of regulation small - Tilted', 'Plasticoding Baseline - Plane', 'Plasticoding Baseline - Tilted')
 
 gens = 200
-pop = 200
+pop = 100
 
 sig = 0.05
 line_size = 30
@@ -32,7 +32,7 @@ show_markers = TRUE # shows statistical tests markers on line plots
 show_legends = TRUE # shows legends on line plots
 
 # one color per item in experiments_labels2, but are not respected if show_legends as on
-experiments_type_colors = c( '#00e700' , '#009900') # light green,dark green
+experiments_type_colors = c('#009900',  '#FF8000', '#BA1616', '#000099') # light green,dark green
 
 #### CHANGE THE PARAMETERS HERE ####
 
