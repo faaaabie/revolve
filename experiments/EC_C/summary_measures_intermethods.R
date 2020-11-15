@@ -14,7 +14,7 @@ base_directory <-paste('data', sep='')
 analysis = 'results_small_vs_baseline'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('cost_of_regulatione_big', 'plasticoding_baseline')
+experiments_type = c('cost_of_regulation_big', 'plasticoding_baseline')
 experiments_labels = c('Cost of regulation small', 'Plasticoding baseline')
 runs = list(c(1:5), c(1:20))
 
