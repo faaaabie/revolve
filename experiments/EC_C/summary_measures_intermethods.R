@@ -458,6 +458,7 @@ for (type_summary in c('means','quants'))
     min_y = 0
 
     #if (measures_names[i] == 'absolute_size' )  {    max_y = 16}
+    exp
 
     graph = graph  +  labs( y=measures_labels[i], x="Generation", title=paste(str_to_title(environments[[exp]][env]), "Season"))
     if (max_y>0) {
