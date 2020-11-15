@@ -43,6 +43,7 @@ for (exp in 1:length(experiments_type))
 {
   for (env in 1:length(environments[[exp]]))
   {
+    experiments_type
     methods = c(methods, paste(experiments_type[exp], environments[[exp]][env], sep='_'))
   }
 }
