@@ -1,5 +1,5 @@
 library(sqldf)
-require('magick')
+require(magick)
 
 ##### change paths/labels/params here #####
 
