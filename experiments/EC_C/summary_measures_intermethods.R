@@ -459,7 +459,7 @@ for (type_summary in c('means','quants'))
 
     #if (measures_names[i] == 'absolute_size' )  {    max_y = 16}
 
-    graph = graph  +  labs( y=measures_labels[i], x="Generation", title=paste(str_to_title(environments[[1][env]), "Season"))
+    graph = graph  +  labs( y=measures_labels[i], x="Generation", title=paste(str_to_title(environments[[1]]), "Season"))
     if (max_y>0) {
       graph = graph + coord_cartesian(ylim = c(min_y, max_y))
     }
@@ -494,7 +494,7 @@ for (i in 1:length(measures_names))
 
   g1 <-  ggplot(data=all_final_values, aes(x= type , y=values, color=type )) +
     geom_boxplot(position = position_dodge(width=0.9),lwd=2,  outlier.size = 4) +
-    labs( x="Method", y=measures_labels[i], title=str_to_title(paste(environments[[exp]][env], "Season")))
+    labs( x="Method", y=measures_labels[i], title=str_to_title(paste(environments[[exp]], "Season")))
 
   max_y =  0
   min_y = 0
