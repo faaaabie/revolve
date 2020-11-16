@@ -1,5 +1,4 @@
 library(sqldf)
-install.packages("magick")
 require(magick)
 
 ##### change paths/labels/params here #####
