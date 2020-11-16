@@ -494,7 +494,7 @@ for (i in 1:length(measures_names))
 
   g1 <-  ggplot(data=all_final_values, aes(x= type , y=values, color=type )) +
     geom_boxplot(position = position_dodge(width=0.9),lwd=2,  outlier.size = 4) +
-    labs( x="Method", y=measures_labels[i], title=str_to_title(paste(environments[[exp]], "Season")))
+    labs( x="Method", y=measures_labels[i], title=str_to_title(paste(environments[[1]], "Season")))
 
   max_y =  0
   min_y = 0
