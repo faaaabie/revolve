@@ -35,9 +35,10 @@ for(m in 1:length(paths))
         
         ids_gens = data.frame()
         list = strsplit(list.files(paste(input_directory2, environments[[m]][1],'/selectedpop_',gens-1, sep='')), ' ')
+        print(list)
         for(geno in 1:pop)
         {
-          genome =  data.frame(cbind(c(gens), c(strsplit(strsplit(list [[geno]],'_')[[1]][3],'.png')[[1]][1])))
+          genome =  data.frame(cbind(c(gens), c(strsplit(strsplit(list[[geno]],'_')[[1]][3],'.png')[[1]][1])))
           names(genome)<-c('generation','robot_id')
           ids_gens = rbind(ids_gens,genome)
         }
