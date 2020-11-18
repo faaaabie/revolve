@@ -13,7 +13,7 @@
 
 while true
 	do
-         for i in {1..4}; do
+         for i in {6..6}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --port-start 11141  --evaluation-time 50;
 
                 sleep 5s
@@ -22,7 +22,7 @@ done
 
 while true
 	do
-         for i in {5..8}; do
+         for i in {7..7}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --port-start 11200  --evaluation-time 50;
 
                 sleep 5s
@@ -31,7 +31,7 @@ done
 
 while true
 	do
-         for i in {9..11}; do
+         for i in {8..8}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --port-start 11300  --evaluation-time 50;
 
                 sleep 5s
@@ -40,7 +40,7 @@ done
 
 while true
 	do
-         for i in {12..14}; do
+         for i in {9..9}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --port-start 11250  --evaluation-time 50;
 
                 sleep 5s
@@ -49,7 +49,7 @@ done
 
 while true
 	do
-         for i in {15..17}; do
+         for i in {10..10}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --port-start 11350  --evaluation-time 50;
 
                 sleep 5s
@@ -58,7 +58,7 @@ done
 
 while true
 	do
-         for i in {18..20}; do
+         for i in {11..11}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --port-start 11400  --evaluation-time 50;
 
                 sleep 5s
