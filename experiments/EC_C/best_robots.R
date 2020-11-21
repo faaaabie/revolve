@@ -12,7 +12,7 @@ base_directory <- paste('data/', sep='')
 runs = list(c(1:5))
 gens = 200
 pop = 100
-num_top = 1
+num_top = 10
 
 analysis = 'results_cost_of_regulation_small/images'
 
