@@ -3,7 +3,7 @@ require('magick')
 
 ##### change paths/labels/params here #####
 
-paths = c('cost_of_regulation_small')
+paths = c('cost_of_regulation_big')
 
 environments = list(c('plane','tilted5'))
 
