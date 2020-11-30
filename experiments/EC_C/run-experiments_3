@@ -3,7 +3,7 @@
 while true
 	do
          for i in {15..16}; do
-                ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --n-cores 4 --port-start 11141  --evaluation-time 50;
+                ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --n-cores 4 --port-start 11100  --evaluation-time 50;
 
                 sleep 5s
 	   done
