@@ -2,7 +2,7 @@
 
 while true
 	do
-         for i in {15..16}; do
+         for i in {19..20}; do
                 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --n-cores 4 --port-start 13141  --evaluation-time 50;
 
                 sleep 5s
