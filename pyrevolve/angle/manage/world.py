@@ -208,11 +208,11 @@ class WorldManager(manage.WorldManager):
             self._update_states
         )
 
-        self.contact_subscriber = await self.manager.subscribe(
-            '/gazebo/default/physics/contacts',
-            'gazebo.msgs.Contacts',
-            self._update_contacts
-        )
+        #self.contact_subscriber = await self.manager.subscribe(
+        #    '/gazebo/default/physics/contacts',
+        #    'gazebo.msgs.Contacts',
+        #    self._update_contacts
+        #)
 
         # Awaiting this immediately will lock the program
         update_state_future = self.set_state_update_frequency(
