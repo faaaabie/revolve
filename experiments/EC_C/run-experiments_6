@@ -1,0 +1,18 @@
+#!/bin/bash
+
+while true
+	do
+         for i in {16..16}; do
+                nice -n 19 ./revolve.py --experiment-name EC_C/data/cost_of_regulation_big_$i --run $i --manager experiments/EC_C/cost_of_regulation.py --n-cores 1 --port-start 15141  --evaluation-time 50;
+
+                sleep 5s
+	   done
+done
+
+while true
+	do
+    sleep 900s;
+    kill $(  ps aux | grep 'gzserver' | awk '{print $2}');
+    kill $(  ps aux | grep 'revolve.py' | awk '{print $2}');
+    sleep 60s;
+done
