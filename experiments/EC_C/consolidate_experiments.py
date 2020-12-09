@@ -15,7 +15,7 @@ environments = {
   'cost_of_regulation_big': ['plane','tilted5']
 # ,'baseline_big': ['plane','tilted5']
                  }
-runs = range(1,11)
+runs = range(1,21)
 
 
 # set these variables according to your experiments #
