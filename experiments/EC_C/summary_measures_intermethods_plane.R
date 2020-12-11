@@ -11,19 +11,19 @@ library(stringr)
 
 #### CHANGE THE PARAMETERS HERE ####
 base_directory <-paste('data', sep='')
-analysis = 'results_preliminary_vs_baseline_plane'
+analysis = 'results_final_vs_baseline_plane'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
 experiments_type = c('cost_of_regulation_big', 'plasticoding_baseline')
-experiments_labels = c('Preliminary', 'Plasticoding baseline')
-runs = list(c(1:20), c(1:20))
+experiments_labels = c('Regulation plane', 'Plasticoding baseline plane')
+runs = list(c(1:10), c(1:20))
 
 environments = list( c( 'plane'), c( 'plane') ) # update with desired environment
 environments_labels = list( c( 'Plane'), c( 'Plane') ) 
-initials =   c( 'm1p', 'm2p')
-experiments_labels2 = c('Preliminary - Plane', 'Plasticoding baseline - Plane')
+initials =   c( 'Regulation', 'Baseline')
+experiments_labels2 = c('Regulation - Plane', 'Plasticoding baseline - Plane')
 
-gens = 81
+gens = 200
 pop = 100
 
 sig = 0.05
