@@ -33,6 +33,7 @@ show_legends = TRUE # shows legends on line plots
 
 # one color per item in experiments_labels2, but are not respected if show_legends as on
 experiments_type_colors = c( '#00e700' , '#009900') # light green,dark green
+experiments_type_colors2 = c('#fa9f98', '#66d8db')
 
 #### CHANGE THE PARAMETERS HERE ####
 
@@ -82,6 +83,7 @@ measures_names = c(
                      'sensors_reach',
                      'recurrence',
                      'synaptic_reception',
+                     'n_true_clauses',
                      'fitness',
                      'cons_fitness'
   )
@@ -122,6 +124,7 @@ measures_names = c(
     'Sensors Reach',
     'Recurrence',
     'synaptic_reception',
+    'Number of true clauses',
     'Fitness', 
     'Number of slaves'
   )
@@ -375,12 +378,12 @@ measures_names = c(
        {
         graph = graph + geom_ribbon(aes_string(ymin=paste(methods[m],'_',measures_names[i],'_avg','-',methods[m],'_',measures_names[i],'_stdev',sep=''), 
                                                    ymax=paste(methods[m],'_',measures_names[i],'_avg','+',methods[m],'_',measures_names[i],'_stdev',sep='') ), 
-                                    fill=experiments_type_colors[m] ,  color=experiments_type_colors[m],alpha=0.2)
+                                    fill=experiments_type_colors2[m] ,  color=experiments_type_colors2[m],alpha=0.2)
        }else
        {
          graph = graph + geom_ribbon(aes_string(ymin=paste(methods[m],'_',measures_names[i],'_avg_Q25',sep=''), 
                                                   ymax=paste(methods[m],'_',measures_names[i],'_avg_Q75',sep='') ), 
-                                     fill=experiments_type_colors[m] ,  color=experiments_type_colors[m],alpha=0.2) 
+                                     fill=experiments_type_colors2[m] ,  color=experiments_type_colors2[m],alpha=0.2) 
        }
       }
       
