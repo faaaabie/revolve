@@ -7,16 +7,16 @@ dirpath = 'data/'
 experiments_type = [
 #  'flat_big',
 #'tilted_big',
- 'plastic_big'
+ 'cost_of_regulation_big'
 #,'baseline_big'
 ]
 environments = {
 #  'flat_big': ['plane'],
 #'tilted_big': ['tilted5'],
-  'plastic_big': ['plane','tilted5']
+  'cost_of_regulation': ['plane','tilted5']
 # ,'baseline_big': ['plane','tilted5']
                  }
-runs = range(1,3)
+runs = range(1,11)
 #Set hardcoded to True or False, whether the regulation of the clauses was harcoded
 hardcoded = True
 
