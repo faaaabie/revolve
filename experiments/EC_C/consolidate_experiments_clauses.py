@@ -115,7 +115,7 @@ for exp in experiments_type:
             path1b = '/storage/karine/journal2/' + exp + "_" + str(run) + '/data_fullevolution/' + env
             path2a = dirpath + exp + "_" + str(run) + '/selectedpop_' + env
             path2b = '/storage/karine/journal2/' + exp + "_" + str(run) + '/selectedpop_' + env
-            path3 = dirpath + exp + "_" + str(run) + '/data_fullevolution/genotypes/genotype_robot_'
+            path3 = '/storage/karine/journal2/' + exp + "_" + str(run) + '/data_fullevolution/genotypes/genotype_robot_'
 
             behavior_headers, phenotype_headers = build_headers(path1a, path1b, path2a, path2b)
 
