@@ -110,7 +110,7 @@ for exp in experiments_type:
 
         for run in runs:
 
-            path0 = dirpath + exp + "_" + str(run) + '/data_fullevolution'
+            path0 = '/storage/karine/journal2/' + exp + "_" + str(run) + '/data_fullevolution'
             path1a = dirpath + exp + "_" + str(run) + '/data_fullevolution/' + env
             path1b = '/storage/karine/journal2/' + exp + "_" + str(run) + '/data_fullevolution/' + env
             path2a = dirpath + exp + "_" + str(run) + '/selectedpop_' + env
