@@ -14,7 +14,7 @@ base_directory <-paste('data', sep='')
 analysis = 'results_final_vs_baseline_tilted'
 output_directory = paste(base_directory,'/',analysis ,sep='')
 
-experiments_type = c('cost_of_regulation_big', 'plasticoding_baseline')
+experiments_type = c('cost_of_regulation_big', 'plastic_bib')
 experiments_labels = c('Regulation tilted', 'Plasticoding baseline tilted')
 runs = list(c(1:10), c(1:20))
 
