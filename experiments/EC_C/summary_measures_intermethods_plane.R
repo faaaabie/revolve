@@ -33,7 +33,7 @@ show_legends = TRUE # shows legends on line plots
 
 # one color per item in experiments_labels2, but are not respected if show_legends as on
 experiments_type_colors = c( '#00e700' , '#009900') # light green,dark green
-experiments_type_colors2 = c('#fa9f98', '#66d8db')
+experiments_type_colors2 = c('#66d8db', '#fa9f98')
 
 #### CHANGE THE PARAMETERS HERE ####
 
