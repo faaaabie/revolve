@@ -7,18 +7,18 @@ dirpath = 'data/'
 experiments_type = [
 #  'flat_big',
 #'tilted_big',
- 'cost_of_regulation_big'
+ 'plastic_big'
 #,'baseline_big'
 ]
 environments = {
 #  'flat_big': ['plane'],
 #'tilted_big': ['tilted5'],
-  'cost_of_regulation': ['plane','tilted5']
+  'plastic_big': ['plane','tilted5']
 # ,'baseline_big': ['plane','tilted5']
                  }
-runs = range(1,11)
+runs = range(1,21)
 #Set hardcoded to True or False, whether the regulation of the clauses was harcoded
-hardcoded = True
+hardcoded = False
 
 
 # set these variables according to your experiments #
@@ -66,8 +66,8 @@ def true_clauses(clauses, env, hardcoded):
 
     return n_clauses
 
-def build_headers(path1, path2):
-    file_summary = open(path1 + "/all_measures.tsv", "w+")
+def build_headers(path1a, path1b, path2a, path2b):
+    file_summary = open(path1a + "/all_measures.tsv", "w+")
     file_summary.write('robot_id\t')
 
     behavior_headers = []
@@ -89,7 +89,7 @@ def build_headers(path1, path2):
     #         file_summary.write(measure+'\t')
 
     phenotype_headers = []
-    with open(path1 + '/descriptors/phenotype_desc_robot_1.txt') as file:
+    with open(path1b + '/descriptors/phenotype_desc_robot_1.txt') as file:
         for line in file:
             measure, value = line.strip().split(' ')
             phenotype_headers.append(measure)
@@ -98,7 +98,7 @@ def build_headers(path1, path2):
     file_summary.write('fitness\t cons_fitness\n')
     file_summary.close()
 
-    file_summary = open(path2 + "/snapshots_ids.tsv", "w+")
+    file_summary = open(path2a + "/snapshots_ids.tsv", "w+")
     file_summary.write('generation\trobot_id\n')
     file_summary.close()
 
@@ -111,20 +111,22 @@ for exp in experiments_type:
         for run in runs:
 
             path0 = dirpath + exp + "_" + str(run) + '/data_fullevolution'
-            path1 = dirpath + exp + "_" + str(run) + '/data_fullevolution/' + env
-            path2 = dirpath + exp + "_" + str(run) + '/selectedpop_' + env
+            path1a = dirpath + exp + "_" + str(run) + '/data_fullevolution/' + env
+            path1b = '/storage/karine/journal2' + exp + "_" + str(run) + '/data_fullevolution/' + env
+            path2a = dirpath + exp + "_" + str(run) + '/selectedpop_' + env
+            path2b = '/storage/karine/journal2' + exp + "_" + str(run) + '/selectedpop_' + env
             path3 = dirpath + exp + "_" + str(run) + '/data_fullevolution/genotypes/genotype_robot_'
 
-            behavior_headers, phenotype_headers = build_headers(path1, path2)
+            behavior_headers, phenotype_headers = build_headers(path1a, path1b, path2a, path2b)
 
-            file_summary = open(path1 + "/all_measures.tsv", "a")
+            file_summary = open(path1a + "/all_measures.tsv", "a")
             for r, d, f in os.walk(path0+'/consolidated_fitness'):
                 for file in f:
 
                     robot_id = file.split('.')[0].split('_')[-1]
                     file_summary.write(robot_id+'\t')
 
-                    bh_file = path1+'/descriptors/behavior_desc_robot_'+robot_id+'.txt'
+                    bh_file = path1b+'/descriptors/behavior_desc_robot_'+robot_id+'.txt'
                     if os.path.isfile(bh_file):
                         with open(bh_file) as file:
                             for line in file:
@@ -138,7 +140,7 @@ for exp in experiments_type:
                         for h in behavior_headers:
                             file_summary.write('None'+'\t')
 
-                    pt_file = path1+'/descriptors/phenotype_desc_robot_'+robot_id+'.txt'
+                    pt_file = path1b+'/descriptors/phenotype_desc_robot_'+robot_id+'.txt'
                     if os.path.isfile(pt_file):
                         with open(pt_file) as file:
                             for line in file:
@@ -152,7 +154,7 @@ for exp in experiments_type:
                     n_true_clauses = str(true_clauses(clauses, env, hardcoded))
                     file_summary.write(n_true_clauses + '\t')
 
-                    f_file = open(path1+'/fitness/fitness_robot_'+robot_id+'.txt', 'r')
+                    f_file = open(path1b+'/fitness/fitness_robot_'+robot_id+'.txt', 'r')
                     fitness = f_file.read()
                     file_summary.write(fitness + '\t')
 
@@ -162,7 +164,7 @@ for exp in experiments_type:
 
             num_files = len(f)
             list_gens = []
-            for r, d, f in os.walk(path2):
+            for r, d, f in os.walk(path2b):
                 for dir in d:
                     if 'selectedpop' in dir:
                         gen = dir.split('_')[1]
@@ -176,12 +178,12 @@ for exp in experiments_type:
 
             file_summary.close()
 
-            file_summary = open(path2 + "/snapshots_ids.tsv", "a")
-            for r, d, f in os.walk(path2):
+            file_summary = open(path2a + "/snapshots_ids.tsv", "a")
+            for r, d, f in os.walk(path2b):
                 for dir in d:
                     if 'selectedpop' in dir:
                         gen = dir.split('_')[1]
-                        for r2, d2, f2 in os.walk(path2 + '/selectedpop_' + str(gen)):
+                        for r2, d2, f2 in os.walk(path2b + '/selectedpop_' + str(gen)):
                             for file in f2:
                                 if 'body' in file:
                                     id = file.split('.')[0].split('_')[-1]
