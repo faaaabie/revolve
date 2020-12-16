@@ -70,12 +70,10 @@ for(m in 1:length(paths))
               bodies = c(bodies, body)
              }
            }
+            side_by_side = image_append(bodies, stack=F)
          }
-          
-       side_by_side = image_append(bodies, stack=F)
-        
+        image_write(side_by_side, path = paste(output_directory,"/",paths[m],'_', environments[[m]][env], "_bodies_best_",exp,".png",sep=''), format = "png")
     }
-    image_write(side_by_side, path = paste(output_directory,"/",paths[m],'_', environments[[m]][env], "_bodies_best_",exp,".png",sep=''), format = "png")
 }
 
 
