@@ -5,7 +5,7 @@ require('magick')
 
 paths = c('cost_of_regulation_big')
 
-environments = list(c('plane'))
+environments = list(c('tilted5'))
 
 base_directory <- paste('data/', sep='')
 
@@ -14,7 +14,7 @@ gens = 200
 pop = 100
 num_top = 10
 
-analysis = 'results_final/images/plane'
+analysis = 'results_final/images/tilted'
 
 ##### change paths/labels/params here #####
 
