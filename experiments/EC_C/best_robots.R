@@ -12,7 +12,7 @@ base_directory <- paste('data/', sep='')
 runs = list(c(1:10))
 gens = 200
 pop = 100
-num_top = 10
+num_top = 1
 
 analysis = 'results_final/images/tilted'
 
