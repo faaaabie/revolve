@@ -14,7 +14,7 @@ gens = 200
 pop = 100
 num_top = 10
 
-analysis = 'results_cost_of_regulation_half/images'
+analysis = 'results_final/images'
 
 ##### change paths/labels/params here #####
 
